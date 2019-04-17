@@ -6,31 +6,15 @@
     "cqhttp": "^4.5.0",
     "node": ">=8"
   },
-  "main": "./src/index.js",
-  "types": "./cq-websocket.d.ts",
-  "files": [
-    "src",
-    "dist/**/*.min.js"
-  ],
-  "scripts": {
-    "test": "nyc ava test/**/*.test.js",
-    "perf": "tape performance/**/*.test.js",
-    "build": "webpack --config ./webpack.config.js",
-    "build-demo": "webpack --config demo/webpack/webpack.config.js",
-    "demo-browser": "http-server demo/webpack/www",
-    "demo-echobot": "node ./demo/echobot.js",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "commit": "git-cz",
-    "lint": "eslint src",
-    "lint:fix": "eslint src --fix",
-    "release": "semantic-release"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/momocow/node-cq-websocket.git"
   },
   "keywords": [
-    "CoolQ",
+    "coolq",
+    "cqhttp",
+    "coolq-http-api",
     "websocket"
   ],
   "author": "MomoCow",
@@ -44,47 +28,7 @@
       "path": "cz-conventional-changelog"
     }
   },
-  "dependencies": {
-    "deep-equal": "^1.0.1",
-    "lodash.get": "^4.4.2",
-    "shortid": "^2.2.13",
-    "websocket": "^1.0.28"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@semantic-release/changelog": "3.0.2",
-    "@semantic-release/git": "7.0.8",
-    "@semantic-release/release-notes-generator": "7.1.4",
-    "ava": "1.2.1",
-    "commitizen": "3.0.7",
-    "coveralls": "3.0.3",
-    "cz-conventional-changelog": "2.1.0",
-    "eslint": "5.15.0",
-    "eslint-config-standard": "12.0.0",
-    "eslint-plugin-import": "2.16.0",
-    "eslint-plugin-node": "8.0.1",
-    "eslint-plugin-promise": "4.0.1",
-    "eslint-plugin-standard": "4.0.0",
-    "http-server": "0.11.1",
-    "kaomojify-webpack-plugin": "0.1.1",
-    "leakage": "0.4.0",
-    "mri": "1.1.4",
-    "nyc": "13.3.0",
-    "proxyquire": "2.1.0",
-    "semantic-release": "15.13.4",
-    "sinon": "7.2.6",
-    "tape": "4.10.1",
-    "webpack": "4.29.6",
-    "webpack-cli": "3.2.3"
-  },
-  "nyc": {
-    "include": [
-      "src/**/*.js",
-      "!src/util/**/*"
-    ]
-  },
-  "ava": {
-    "babel": false,
-    "compileEnhancements": false
-  },
-  "browser": "./src/index.js"
+  }
 }
