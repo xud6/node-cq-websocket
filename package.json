@@ -7,7 +7,15 @@
     "cqhttp": "^4.5.0",
     "node": ">=8"
   },
+  "files": [
+    "src",
+    "dist/**/*.min.js"
+  ],
   "scripts": {
+    "build": "npm run build:tsc && npm run build:webpack",
+    "build:webpack": "webpack --config webpack.config.js",
+    "build:tsc": "tsc",
+    "clean": "rimraf \"src/**/*.d.ts\" \"src/**/!(*.spec).js\" \".dev\"",
     "commit": "git-cz",
     "lint": "eslint --ext .ts src",
     "test": "ava --config ava.config.js",
@@ -56,10 +64,16 @@
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
+    "fs-extra": "^8.1.0",
+    "is-ci": "^2.0.0",
+    "kaomojify-webpack-plugin": "^0.1.1",
     "nyc": "^14.1.1",
+    "rimraf": "^2.6.3",
     "semantic-release": "^15.13.19",
     "source-map-support": "^0.5.12",
     "ts-node": "^8.3.0",
-    "typescript": "^3.5.3"
+    "typescript": "^3.5.3",
+    "webpack": "^4.38.0",
+    "webpack-cli": "^3.3.6"
   }
 }
