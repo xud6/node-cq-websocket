@@ -1,17 +1,25 @@
 language: node_js
-node_js: 8
+node_js:
+  - 8
+  - 10
+  - 12
 
 script:
   - npm run lint
-  - npm test
-  - npm run build
+  - npm run test:ci
 
-deploy:
-  provider: script
-  skip_cleanup: true
-  on:
-    branch: master
-  script:
-    - npm run release
+jobs:
+  include:
+    - stage: release
+      node_js: 10
+      script:
+        - npm run build
+      deploy:
+        provider: script
+        skip_cleanup: true
+        on:
+          branch: master
+        script:
+          - npm run release
 
-after_success: npm run coverage
+      after_success: npm run coverage
