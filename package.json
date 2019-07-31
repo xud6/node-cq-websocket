@@ -8,6 +8,7 @@
   },
   "scripts": {
     "commit": "git-cz",
+    "lint": "eslint --ext .ts src",
     "release": "semantic-release"
   },
   "repository": {
@@ -39,7 +40,16 @@
     "@semantic-release/github": "^5.4.2",
     "@semantic-release/npm": "^5.1.13",
     "@semantic-release/release-notes-generator": "^7.2.1",
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0",
     "commitizen": "^4.0.3",
-    "semantic-release": "^15.13.19"
+    "eslint": "^6.1.0",
+    "eslint-config-standard-with-typescript": "^7.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "semantic-release": "^15.13.19",
+    "typescript": "^3.5.3"
   }
 }
