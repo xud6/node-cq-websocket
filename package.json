@@ -2,6 +2,7 @@
   "name": "cq-websocket",
   "version": "2.0.0",
   "description": "A Node SDK for developing QQ chatbots based on WebSocket, which is depending on CoolQ and CQHTTP API plugin. ",
+  "main": "src/index",
   "engines": {
     "cqhttp": "^4.5.0",
     "node": ">=8"
@@ -9,6 +10,9 @@
   "scripts": {
     "commit": "git-cz",
     "lint": "eslint --ext .ts src",
+    "test": "ava --config ava.config.js",
+    "test:ci": "nyc ava --config ava-ci.config.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "release": "semantic-release"
   },
   "repository": {
@@ -34,6 +38,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^0.1.3",
     "@semantic-release/changelog": "^3.0.4",
     "@semantic-release/commit-analyzer": "^6.2.0",
     "@semantic-release/git": "^7.0.16",
@@ -42,14 +47,19 @@
     "@semantic-release/release-notes-generator": "^7.2.1",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
+    "ava": "^2.2.0",
     "commitizen": "^4.0.3",
+    "coveralls": "^3.0.5",
     "eslint": "^6.1.0",
     "eslint-config-standard-with-typescript": "^7.1.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
+    "nyc": "^14.1.1",
     "semantic-release": "^15.13.19",
+    "source-map-support": "^0.5.12",
+    "ts-node": "^8.3.0",
     "typescript": "^3.5.3"
   }
 }
