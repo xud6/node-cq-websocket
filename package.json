@@ -4,7 +4,7 @@
   "description": "A Node SDK for developing QQ chatbots based on WebSocket, which is depending on CoolQ and CQHTTP API plugin. ",
   "main": "src/index",
   "engines": {
-    "cqhttp": "^4.5.0",
+    "cqhttp": ">=4.6.0",
     "node": ">=8"
   },
   "files": [
