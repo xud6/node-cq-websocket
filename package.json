@@ -57,7 +57,7 @@
     "@semantic-release/npm": "^5.2.0",
     "@semantic-release/release-notes-generator": "^7.3.0",
     "@typescript-eslint/eslint-plugin": "^2.5.0",
-    "@typescript-eslint/parser": "^2.5.0",
+    "@typescript-eslint/parser": "^2.4.0",
     "ava": "^2.4.0",
     "commitizen": "^4.0.3",
     "coveralls": "^3.0.7",
