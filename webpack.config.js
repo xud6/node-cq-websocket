@@ -3,7 +3,7 @@ const path = require('path')
 const fs = require('fs-extra')
 const KaomojifyWebpackPlugin = require('kaomojify-webpack-plugin')
 
-const ENTRY_FILE = path.join(__dirname, 'src', 'index.js')
+const ENTRY_FILE = path.join(__dirname, 'lib', 'index.js')
 const OUTPUT_DIR = path.join(__dirname, isCI ? 'dist' : '.dev/dist')
 
 fs.ensureDirSync(OUTPUT_DIR)

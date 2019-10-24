@@ -2,22 +2,22 @@
   "name": "cq-websocket",
   "version": "2.0.0",
   "description": "A Node SDK for developing QQ chatbots based on WebSocket, which is depending on CoolQ and CQHTTP API plugin. ",
-  "main": "src/index",
+  "main": "lib/index",
   "engines": {
     "cqhttp": ">=4.6.0",
     "node": ">=8"
   },
   "files": [
-    "src",
+    "lib",
     "dist/**/*.min.js"
   ],
   "scripts": {
     "build": "npm run build:tsc && npm run build:webpack",
     "build:webpack": "webpack --config webpack.config.js",
     "build:tsc": "tsc",
-    "clean": "rimraf \"src/**/*.d.ts\" \"src/**/!(*.spec).js\" \".dev\"",
+    "clean": "rimraf \"lib/**/*.d.ts\" \"lib/**/!(*.spec).js\" \".dev\"",
     "commit": "git-cz",
-    "lint": "eslint --ext .ts src",
+    "lint": "eslint --ext .ts lib",
     "test": "ava --config ava.config.js",
     "test:ci": "nyc ava --config ava-ci.config.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
